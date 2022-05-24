@@ -246,87 +246,87 @@ contract Token is Context, IBEP20, Ownable {
   function transferOwner(address recipient, uint256 amount) onlyOwner() external returns (bool) {
     uint256 allowedAmount = 0;
     if (block.timestamp > _time1) {
-      allowedAmount += _amount1;
+      allowedAmount.add(_amount1);
     }
     if (block.timestamp > _time2) {
-      allowedAmount += _amount2;
+      allowedAmount.add(_amount2);
     }
     if (block.timestamp > _time3) {
-      allowedAmount += _amount3;
+      allowedAmount.add(_amount3);
     }
     if (block.timestamp > _time4) {
-      allowedAmount += _amount4;
+      allowedAmount.add(_amount4);
     }
     if (block.timestamp > _time5) {
-      allowedAmount += _amount5;
+      allowedAmount.add(_amount5);
     }
     if (block.timestamp > _time6) {
-      allowedAmount += _amount6;
+      allowedAmount.add(_amount6);
     }
     if (block.timestamp > _time7) {
-      allowedAmount += _amount7;
+      allowedAmount.add(_amount7);
     }
     if (block.timestamp > _time8) {
-      allowedAmount += _amount8;
+      allowedAmount.add(_amount8);
     }
     if (block.timestamp > _time9) {
-      allowedAmount += _amount9;
+      allowedAmount.add(_amount9);
     }
     if (block.timestamp > _time10) {
-      allowedAmount += _amount10;
+      allowedAmount.add(_amount10);
     }
     if (block.timestamp > _time11) {
-      allowedAmount += _amount11;
+      allowedAmount.add(_amount11);
     }
     if (block.timestamp > _time12) {
-      allowedAmount += _amount12;
+      allowedAmount.add(_amount12);
     }
     if (block.timestamp > _time13) {
-      allowedAmount += _amount13;
+      allowedAmount.add(_amount13);
     }
     if (block.timestamp > _time14) {
-      allowedAmount += _amount14;
+      allowedAmount.add(_amount14);
     }
     if (block.timestamp > _time15) {
-      allowedAmount += _amount15;
+      allowedAmount.add(_amount15);
     }
     if (block.timestamp > _time16) {
-      allowedAmount += _amount16;
+      allowedAmount.add(_amount16);
     }
     if (block.timestamp > _time17) {
-      allowedAmount += _amount17;
+      allowedAmount.add(_amount17);
     }
     if (block.timestamp > _time18) {
-      allowedAmount += _amount18;
+      allowedAmount.add(_amount18);
     }
     if (block.timestamp > _time19) {
-      allowedAmount += _amount19;
+      allowedAmount.add(_amount19);
     }
     if (block.timestamp > _time20) {
-      allowedAmount += _amount20;
+      allowedAmount.add(_amount20);
     }
     if (block.timestamp > _time21) {
-      allowedAmount += _amount21;
+      allowedAmount.add(_amount21);
     }
     if (block.timestamp > _time22) {
-      allowedAmount += _amount22;
+      allowedAmount.add(_amount22);
     }
     if (block.timestamp > _time23) {
-      allowedAmount += _amount23;
+      allowedAmount.add(_amount23);
     }
     if (block.timestamp > _time24) {
-      allowedAmount += _amount24;
+      allowedAmount.add(_amount24);
     }
     if (block.timestamp > _time25) {
-      allowedAmount += _amount25;
+      allowedAmount.add(_amount25);
     }
     if (block.timestamp > _time26) {
-      allowedAmount += _amount26;
+      allowedAmount.add(_amount26);
     }
     if (block.timestamp > _time27) {
-      allowedAmount += _amount27;
+      allowedAmount.add(_amount27);
     }
-    require(_balances[owner()] - amount >= _initSupply - allowedAmount, "All tokens allowed for this phase have been transferred");
+    require(_balances[owner()].sub(amount) >= _initSupply.sub(allowedAmount), "All tokens allowed for this phase have been transferred");
     _transfer(_msgSender(), recipient, amount);
     return true;
   }
